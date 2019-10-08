@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+html,
+html {
+  font-size: 14px;
+}
+@media (min-width: 580px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.form-incidentdata {
+    padding-left: 20%;
+    /*margin: auto;
+    margin-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;*/
+}
+
+.form-box {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 10px;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: #373A3C;
+    background-color: #FAFDFF;
+}

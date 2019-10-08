@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo $pagecss; ?>">
         <!--Title -->
         <title><?php echo $title; ?></title>
-        <link rel=”icon” type=”image/x-icon” href=”./icon.svg”>
+        <!-- <link rel=”icon” type=”image/x-icon” href=”./icon.svg”> -->
     </head>
     <!--Bod
     <body>-->

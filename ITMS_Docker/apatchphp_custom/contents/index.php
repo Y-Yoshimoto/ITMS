@@ -12,6 +12,7 @@
         <?php echo 'PHP Index Page.'; ?><br>
         <a href="./login/">login</a><br>
         <a href="./Dashboard/">Dashboard</a><br>
+        <a href="./registration/">registration</a><br>
     </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
                         <a class="nav-link" href="/itms/Dashboard/">ITMS <span class="sr-only">(現位置)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">インシデント登録</a>
+                        <a class="nav-link" href="/itms/registration/">インシデント登録</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">管理</a>
