@@ -16,13 +16,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">インシデント</h5>
-        <font color="red"><p id="message2" color="#FF0000"></p></font>
         <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <p>インシデント情報</p>
+        <font color="red"><p id="message1" color="#FF0000"></p></font>
+        <font color="red"><p id="message2" color="#FF0000"></p></font>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>

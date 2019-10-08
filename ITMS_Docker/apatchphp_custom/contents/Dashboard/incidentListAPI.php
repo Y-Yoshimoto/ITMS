@@ -28,7 +28,7 @@
 ?>
 
 <?php
-    //ユーザー認証DB問合せ
+    //インシデント情報リスト取得
     function calldatabase($userID){
         //DB接続
         require_once("../../inc/inquiry.inc");
