@@ -12,7 +12,6 @@
         <?php echo 'PHP Index Page.'; ?><br>
         <a href="./login/">login</a><br>
         <a href="./Dashboard/">Dashboard</a><br>
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="phplogo">
     </div>
 </body>
 </html>
