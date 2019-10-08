@@ -1,4 +1,4 @@
-//入力した数字の送受信
+//ログイン認証
 $(function(){
     $('#loginAPICall').click(function() {
         //多重送信防止//ボタンの無効化

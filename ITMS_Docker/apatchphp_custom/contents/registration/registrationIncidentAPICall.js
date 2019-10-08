@@ -1,19 +1,23 @@
-//入力した数字の送受信
+//入力したインシデント情報の送信
 $(function(){
-    $('#loginAPICall').click(function() {
+    $('#registrationIncidentAPICall').click(function() {
         //多重送信防止//ボタンの無効化
         var button = $(this);
         button.attr("disabled", true);
         //　JSON形式に変形
         var sed_data ={
-            'userID': String($("#inputUserID").val()),
-            'password': String($("#inputPassword").val()),
+            'incidentName': String($("#incidentName").val()),
+            'servce': String($("#servce").val()),
+            'severity': Number($("#severity").val()),
+            'brief': String($("#brief").val()),
+            'handling': String($("#handling").val()),
+            'remark': String($("#remark").val())
             }
         console.log("コンソール");
         console.log(sed_data)
         // Ajax通信
         $.post({//POST形式
-            url:"./loginAPI.php",    //URL
+            url:"./registrationIncidentAPI.php",    //URL
             data: sed_data,   //送信JSONデータ
             dataType: "json",                //受信データ
         }).done(function(rcv_data){
@@ -21,10 +25,11 @@ $(function(){
                 console.log(rcv_data);
                 var statusCode = rcv_data.statusCode;
                 if (statusCode=="0") {
-                    $("#message1").text("ユーザー名とパスワードを認証しました");
-                    location.href='../Dashboard/';
+                    $("#message1").text("インシデント情報を登録しました。ダッシュボードに戻ります。");
+                    setTimeout(function(){
+                    location.href='../Dashboard/';},5000);
                 }else{
-                    $("#message1").text("ユーザー名とパスワードを確認して下さい");
+                    $("#message1").text("入力内容を確認して下さい。");
                 }
 
                 console.log("END");

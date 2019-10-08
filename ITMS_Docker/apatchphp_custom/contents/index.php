@@ -14,5 +14,6 @@
         <a href="./Dashboard/">Dashboard</a><br>
         <a href="./registration/">registration</a><br>
     </div>
+    <?php phpinfo(); ?>
 </body>
 </html>

@@ -4,7 +4,6 @@
     //POSTされた値の取得
     $userID = filter_input(INPUT_POST, 'userID');
 
-    //ユーザー,パスワード確認
     //jsonオブジェクトエンコード,送信
     echo json_encode(getIncidentList($userID));
     exit;
