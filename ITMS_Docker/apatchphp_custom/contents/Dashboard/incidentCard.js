@@ -1,5 +1,4 @@
-//$set = ['<div class="card shadow-sm"><div class="card-header"><h4 class="my-0 font-weight-normal">重度</h4></div><div class="card-body"><h5 class="card-title pricing-card-title">インシデント名</h5>概要<ul class="list-unstyled mt-3 mb-4"><li>更新: 2019-10-19</li><li>登録: 2019-10-19</li></ul></div><button class="btn btn-light card-footer text-muted" type="button">詳細/更新</button></div>']
-
+//インシデント情報の取得
 console.log("コンソール");
 $(function(){
     var sed_data ={
@@ -42,7 +41,7 @@ function incidentCard(incidentNumber, servce, severity, incidentName, brief, rec
     var cardHeader = '<div class="card-header" style="background-color :' + sInfo[0] + '"><h4 class="my-0 font-weight-normal">' + sInfo[1] + '</h4></div>';
     var cardBody = '<div class="card-body"><h5 class="card-title pricing-card-title">' + incidentName + '</h5>' + brief;
     var cardInfo = '<ul class="list-unstyled mt-3 mb-4"><li>' + servce + '</li><li>更新: ' + recodeTime + '</li><li>登録: '+ updateTime + '</li></ul></div>';
-    var cardFooter = '<button class="btn btn-light card-footer text-muted" type="button">' +'詳細/更新' + '</button><div>';
+    var cardFooter = '<button class="btn btn-light card-footer text-muted" type="button" id="moreinfo" value='+ incidentNumber +'>' +'詳細/更新' + '</button><div>';
 
     var incidentCardInfo = cardSetting + cardHeader + cardBody + cardInfo + cardFooter;
     return incidentCardInfo;
