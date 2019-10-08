@@ -1,7 +1,6 @@
 //$set = ['<div class="card shadow-sm"><div class="card-header"><h4 class="my-0 font-weight-normal">重度</h4></div><div class="card-body"><h5 class="card-title pricing-card-title">インシデント名</h5>概要<ul class="list-unstyled mt-3 mb-4"><li>更新: 2019-10-19</li><li>登録: 2019-10-19</li></ul></div><button class="btn btn-light card-footer text-muted" type="button">詳細/更新</button></div>']
 
 console.log("コンソール");
-
 $(function(){
     var sed_data ={
         'userID': "1",
@@ -13,16 +12,14 @@ $(function(){
     }).done(function(rcv_data){
             // 受信データ処理
             console.log(rcv_data);
-            var statusCode = rcv_data.statusCode;
-            if (statusCode=="0") {
-                $("#message1").text("ユーザー名とパスワードを認証しました");
-                location.href='../Dashboard/';
-            }else{
-                $("#message1").text("ユーザー名とパスワードを確認して下さい");
+            for(let i of rcv_data){
+                console.log(i);
+                //console.log(i['incidentNumber']);
+                var card = incidentCard(i['incidentNumber'], i['servce'], i['severity'], i['incidentName'], i['brief'], i['recodeTime'],i['updateTime']);
+                $("#incidentCard").append(card);
+                //console.log(card);
             }
-
             console.log("END");
-
     }).fail(function(rcv_data, textStatus, errorThrown){
             // エラー処理
             console.log(rcv_data);
@@ -33,14 +30,10 @@ $(function(){
 
 
 })
-
-
-
-
-var card = incidentCard(1, '情報基盤', 2, 'Nginx停止', 'リバースプロキシ用のnginx.serviceが停止','2019-10-04 15:25:07','2019-10-05 18:25:22');
-console.log(card);
-$("#incidentCard").append(card);
-//$("#incidentCard").append($card2);
+/////静的データ
+//var card = incidentCard(1, '情報基盤', 2, 'Nginx停止', 'リバースプロキシ用のnginx.serviceが停止','2019-10-04 15:25:07','2019-10-05 18:25:22');
+//console.log(card);
+//$("#incidentCard").append(card);
 
 //インシデントナンバー, サービス名, 緊急度,インシデント名, 概要, 登録時刻, 更新時刻
 function incidentCard(incidentNumber, servce, severity, incidentName, brief, recodeTime, updateTime) {
