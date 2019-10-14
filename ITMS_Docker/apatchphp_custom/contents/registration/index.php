@@ -1,7 +1,7 @@
 <!--Header -->
-<?php $title ="registration";$pagecss ="./page.css"; require '../header.php';?>
+<?php $title ="registration";$pagecss ="./page.css"; require '../component/header.php';?>
 <!-- navbar -->
-<?php require '../navbar.php';?>
+<?php require '../component/navbar.php';?>
 
 <div class="form-box">
     <!-- ログインフォーム -->
@@ -52,8 +52,8 @@
 </div>
 
 <!--jquery, Bootstrap, popper -->
-<?php require '../inclode.php'; ?>
+<?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->
 <script src="./registrationIncidentAPICall.js"></script>
 <!--footer -->
-<?php require '../footer.php'; ?>
+<?php require '../component/footer.php'; ?>

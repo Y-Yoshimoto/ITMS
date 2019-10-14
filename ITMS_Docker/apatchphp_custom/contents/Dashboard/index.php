@@ -1,7 +1,7 @@
 <!--Header -->
-<?php $title ="Dashboard";$pagecss ="./page.css"; require '../header.php';?>
+<?php $title ="Dashboard";$pagecss ="./component/page.css"; require '../component/header.php';?>
 <!-- navbar -->
-<?php require '../navbar.php';?>
+<?php require '../component/navbar.php';?>
 
     <div class="container">
          <div id="incidentCard" class="card-deck text-left">
@@ -40,9 +40,9 @@
 </div><!-- /.modal -->
 
 <!--jquery, Bootstrap, popper -->
-<?php require '../inclode.php'; ?>
+<?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->
 <script src="./incidentCard.js"></script>
 <script src="./moreinfo.js"></script>
 <!--footer -->
-<?php require '../footer.php'; ?>
+<?php require '../component/footer.php'; ?>

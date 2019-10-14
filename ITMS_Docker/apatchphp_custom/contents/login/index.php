@@ -1,5 +1,5 @@
 <!--Header -->
-<?php $title ="Login";$pagecss ="./page.css"; require '../header.php';?>
+<?php $title ="Login";$pagecss ="./page.css"; require '../component/header.php';?>
 
 <div class="form-box">
     <!-- ログインフォーム -->
@@ -26,8 +26,8 @@
 </div>
 
 <!--jquery, Bootstrap, popper -->
-<?php require '../inclode.php'; ?>
+<?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->
 <script src="./loginAPICall.js"></script>
 <!--footer -->
-<?php require '../footer.php'; ?>
+<?php require '../component/footer.php'; ?>
