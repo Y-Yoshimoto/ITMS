@@ -1,5 +1,4 @@
 //インシデント情報の取得
-console.log("コンソール");
 $(function(){
     var sed_data ={
         'userID': "1",
@@ -22,8 +21,10 @@ $(function(){
     }).fail(function(rcv_data, textStatus, errorThrown){
             // エラー処理
             console.log(rcv_data);
-            $("#message1").text("サポートへご連絡ください。");
+            $("#SysMessage").text("サポートへご連絡ください。");
+            alert('サポートへご連絡ください。');
             //alert(errorThrown);
+            console.log("ERROR");
     }).always(function(){
     })
 

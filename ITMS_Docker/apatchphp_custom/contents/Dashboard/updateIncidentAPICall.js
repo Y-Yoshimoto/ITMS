@@ -4,6 +4,15 @@ $(function(){
         //多重送信防止//ボタンの無効化
         var button = $(this);
         button.attr("disabled", true);
+        // 完了フラッグチェック
+        var closedFlag = 0;
+        if($("#closedFlag").prop('checked')){
+            closedFlag = 1;
+        }
+        else{
+            closedFlag = 0;
+        }
+
         //JSON形式に変形
         var sed_data ={
             'incidentNumber': Number($("#incidentNumberModal").val()),
@@ -13,7 +22,7 @@ $(function(){
             'brief': String($("#briefModal").val()),
             'handling': String($("#handlingModal").val()),
             'remark': String($("#remarkModal").val()),
-            'remark': String($("#remarkModal").val())
+            'closedFlag': closedFlag
             }
         console.log("コンソール");
         console.log(sed_data)
@@ -27,19 +36,21 @@ $(function(){
                 console.log(rcv_data);
                 var statusCode = rcv_data.statusCode;
                 if (statusCode=="0") {
-                    $("#message1").text("インシデント情報を登録しました。ダッシュボードに戻ります。");
+                    $('.SysMessage').css('color','#5CB85C');
+                    $("#SysMessage").text("更新しました。ダッシュボードに戻ります。");
                     setTimeout(function(){
-                    location.href='../Dashboard/';},1500);
+                    location.href='../Dashboard/';},600);
                 }else{
-                    $("#message1").text("入力内容を確認して下さい。");
+                    $('.SysMessage').css('color','#D9534F');
+                    $("#SysMessage").text("入力内容を確認して下さい。");
                 }
-
                 console.log("END");
 
         }).fail(function(rcv_data, textStatus, errorThrown){
                 // エラー処理
                 console.log(rcv_data);
-                $("#message1").text("サポートへご連絡ください。");
+                $('.SysMessage').css('color','#D9534F');
+                $("#SysMessage").text("サポートへご連絡ください。");
                 //alert(errorThrown);
         }).always(function(){
         //ボタンの再有効化

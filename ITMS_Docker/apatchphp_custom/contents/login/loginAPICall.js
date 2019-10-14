@@ -21,10 +21,12 @@ $(function(){
                 console.log(rcv_data);
                 var statusCode = rcv_data.statusCode;
                 if (statusCode=="0") {
-                    $("#message1").text("ユーザー名とパスワードを認証しました");
+                    //$('.SysMessage').css('color','#5CB85C');
+                    //$("#SysMessage").text("ユーザー名とパスワードを認証しました");
                     location.href='../Dashboard/';
                 }else{
-                    $("#message1").text("ユーザー名とパスワードを確認して下さい");
+                    $('.SysMessage').css('color','#D9534F');
+                    $("#SysMessage").text("ユーザー名とパスワードを確認して下さい");
                 }
 
                 console.log("END");
@@ -32,7 +34,8 @@ $(function(){
         }).fail(function(rcv_data, textStatus, errorThrown){
                 // エラー処理
                 console.log(rcv_data);
-                $("#message1").text("サポートへご連絡ください。");
+                $('.SysMessage').css('color','#D9534F');
+                $("#SysMessage").text("サポートへご連絡ください。");
                 //alert(errorThrown);
         }).always(function(){
         //ボタンの再有効化

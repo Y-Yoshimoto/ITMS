@@ -7,7 +7,8 @@
     <!-- ログインフォーム -->
   <form class="form-incidentdata">
     <h3 class="h3 mb-3 font-weight-normal">インシデント登録</h3>
-    <font color="red"><p id="message1" color="#FF0000"></p></font>
+    <!-- メッセージ -->
+    <p class="SysMessage" id="SysMessage"</p>
      <div class="row">
          <div class="form-group col">
            <label for="Input">インシデント管理名</label>

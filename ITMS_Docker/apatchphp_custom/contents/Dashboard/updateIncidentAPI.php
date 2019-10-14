@@ -9,7 +9,8 @@
     $brief = filter_input(INPUT_POST, 'brief');
     $handling = filter_input(INPUT_POST, 'handling');
     $remark = filter_input(INPUT_POST, 'remark');
-    $incidenInfo=[$incidentName, $servce, $severity, $brief, $handling, $remark];
+    $closedFlag = filter_input(INPUT_POST, 'closedFlag');
+    $incidenInfo=[$incidentName, $servce, $severity, $brief, $handling, $remark,$closedFlag];
     //インシデント登録
     //jsonオブジェクトエンコード,送信
     echo json_encode(updateIncident($incidentNumber,$incidenInfo));
@@ -42,9 +43,16 @@
         $nowTime = date("Y-m-d H:i:s");
         // $sql = "INSERT INTO t_incidentdata VALUES ("..",'".$iInfo[1]."', 1, '".$iInfo[2]."','".$iInfo[0]."','".$iInfo[3]."','".$iInfo[4]."','".$iInfo[5]."','$nowTime','$nowTime', 0);";
         $sql_CRUD = "UPDATE t_incidentdata SET ";
-        $up = "updateTime = '".$nowTime."'";
-        $sql_WHERE = " WHERE incidentNumber = ".$iNumber.";";
-        $sql = $sql_CRUD.$up.$sql_WHERE;
+        $sql_SET = $sql_SET."servce = '".$iInfo[1]."', ";
+        $sql_SET = $sql_SET."severity = ".$iInfo[2].", ";
+        $sql_SET = $sql_SET."incidentName = '".$iInfo[0]."', ";
+        $sql_SET = $sql_SET."brief = '".$iInfo[3]."', ";
+        $sql_SET = $sql_SET."handling = '".$iInfo[4]."', ";
+        $sql_SET = $sql_SET."remark = '".$iInfo[5]."', ";
+        $sql_SET = $sql_SET."updateTime = '".$nowTime."', ";
+        $sql_SET = $sql_SET."closedFlag = ".$iInfo[6]." ";
+        $sql_WHERE = "WHERE incidentNumber = ".$iNumber.";";
+        $sql = $sql_CRUD.$sql_SET.$sql_WHERE;
         error_log("$sql");
         //SQL発行
         $insert = $dbh->exec($sql);

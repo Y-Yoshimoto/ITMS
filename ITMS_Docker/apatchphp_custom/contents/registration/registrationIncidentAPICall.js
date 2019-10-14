@@ -25,19 +25,21 @@ $(function(){
                 console.log(rcv_data);
                 var statusCode = rcv_data.statusCode;
                 if (statusCode=="0") {
-                    $("#message1").text("インシデント情報を登録しました。ダッシュボードに戻ります。");
+                    $('.SysMessage').css('color','#5CB85C');
+                    $("#SysMessage").text("登録しました。ダッシュボードに戻ります。");
                     setTimeout(function(){
-                    location.href='../Dashboard/';},1500);
+                    location.href='../Dashboard/';},600);
                 }else{
-                    $("#message1").text("入力内容を確認して下さい。");
+                    $('.SysMessage').css('color','#D9534F');
+                    $("#SysMessage").text("入力内容を確認して下さい。");
                 }
-
                 console.log("END");
 
         }).fail(function(rcv_data, textStatus, errorThrown){
                 // エラー処理
                 console.log(rcv_data);
-                $("#message1").text("サポートへご連絡ください。");
+                $('.SysMessage').css('color','#D9534F');
+                $("#SysMessage").text("入力内容を確認して下さい。");
                 //alert(errorThrown);
         }).always(function(){
         //ボタンの再有効化

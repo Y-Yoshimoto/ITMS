@@ -42,7 +42,8 @@ $('#myModal').on('show.bs.modal', function (event) {
     }).fail(function(rcv_data, textStatus, errorThrown){
             // エラー処理
             console.log(rcv_data);
-            $("#SystemMessage").text("サポートへご連絡ください。");
+            $('.SysMessage').css('color','#D9534F');
+            $("#SysMessage").text("サポートへご連絡ください。");
             //alert(errorThrown);
     }).always(function(){
     //ボタンの再有効化

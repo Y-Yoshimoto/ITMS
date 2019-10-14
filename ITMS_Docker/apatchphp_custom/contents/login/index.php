@@ -19,7 +19,8 @@
       </label>
     </div> -->
     <button class="btn btn-lg btn-primary btn-block" id="loginAPICall" type="submit">ログイン</button>
-    <font color="red"><p id="message1" color="#FF0000"></p></font>
+    <!-- SysMessage -->
+    <p class="SysMessage" id="SysMessage"> </p>
 
     <!-- <p class="mt-5 mb-3 text-muted">&copy;2019</p> -->
   </form>
