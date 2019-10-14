@@ -15,15 +15,21 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">インシデント</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><span id="massage1"></span></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <p>インシデント情報</p>
-        <font color="red"><p id="message1" color="#FF0000"></p></font>
-        <font color="red"><p id="message2" color="#FF0000"></p></font>
+	    <!-- インシデント名: <span id="massage1"></span><br> -->
+	    サービス名: <span id="message2"></span><br>
+            重要度: <span id="message3"></span><br>
+            概要: <span id="message4"></span><br>
+            対応: <span id="message5"></span><br>
+            備考: <span id="message6"></span><br>
+            登録時刻: <span id="message7"></span><br>
+            更新時刻: <span id="message8"></span><br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>

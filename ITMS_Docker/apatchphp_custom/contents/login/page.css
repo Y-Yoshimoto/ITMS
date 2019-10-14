@@ -47,7 +47,7 @@ body {
 }
 
 .form-box {
-    /*height: 70%;*/
+    height: 70%;
     width: 25%;
     display: -ms-flexbox;
     display: flex;
@@ -55,7 +55,7 @@ body {
     margin: 0 auto;
     /*ブラウザの中央に配置*/
     text-align: center;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 40px;
     color: #373A3C;
     background-color: #FAFDFF;

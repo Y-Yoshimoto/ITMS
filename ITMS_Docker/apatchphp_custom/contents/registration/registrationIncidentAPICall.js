@@ -4,7 +4,7 @@ $(function(){
         //多重送信防止//ボタンの無効化
         var button = $(this);
         button.attr("disabled", true);
-        //　JSON形式に変形
+        //JSON形式に変形
         var sed_data ={
             'incidentName': String($("#incidentName").val()),
             'servce': String($("#servce").val()),
@@ -27,7 +27,7 @@ $(function(){
                 if (statusCode=="0") {
                     $("#message1").text("インシデント情報を登録しました。ダッシュボードに戻ります。");
                     setTimeout(function(){
-                    location.href='../Dashboard/';},5000);
+                    location.href='../Dashboard/';},1500);
                 }else{
                     $("#message1").text("入力内容を確認して下さい。");
                 }

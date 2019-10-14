@@ -20,23 +20,23 @@ $('#myModal').on('show.bs.modal', function (event) {
     }).done(function(rcv_data){
             // 受信データ処理
             console.log(rcv_data);
-            var statusCode = rcv_data.statusCode;
-            if (statusCode=="0") {
-                $("#message1").text("情報を取得しました。");
-                location.href='../Dashboard/';
-            }else{
-                $("#message1").text("再確認して下さい");
-            }
+	    //setTimeout(function(){console.log(rcv_data.incidentName);},10000);
+	    $("#massage1").text(rcv_data.incidentName);
+            $("#message2").text(rcv_data.servce);
+            $("#message3").text(rcv_data.severity);
+            $("#message4").text(rcv_data.brief);
+            $("#message5").text(rcv_data.handling);
+            $("#message6").text(rcv_data.remark);
+            $("#message7").text(rcv_data.recodeTime);
+            $("#message8").text(rcv_data.updateTime);
             console.log("END");
     }).fail(function(rcv_data, textStatus, errorThrown){
             // エラー処理
             console.log(rcv_data);
-            $("#message1").text("サポートへご連絡ください。");
+            $("#message9").text("サポートへご連絡ください。");
             //alert(errorThrown);
     }).always(function(){
     //ボタンの再有効化
         button.attr("disabled", false);
     })
-    //modal.find('.modal-title').text(recipient + 'へのメッセージ');
-    $("#message2").text('ID:' + iNUmber);
 });
