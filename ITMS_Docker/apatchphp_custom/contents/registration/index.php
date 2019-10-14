@@ -1,5 +1,5 @@
 <!--Header -->
-<?php $title ="registration";$pagecss ="./page.css"; require '../component/header.php';?>
+<?php $title ="インシデン登録";$pagecss ="../registration/page.css"; require '../component/header.php';?>
 <!-- navbar -->
 <?php require '../component/navbar.php';?>
 

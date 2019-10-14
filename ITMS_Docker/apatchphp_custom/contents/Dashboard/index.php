@@ -1,5 +1,5 @@
 <!--Header -->
-<?php $title ="Dashboard";$pagecss ="./component/page.css"; require '../component/header.php';?>
+<?php $title ="ダッシュボード";$pagecss ="../Dashboard/page.css"; require '../component/header.php';?>
 <!-- navbar -->
 <?php require '../component/navbar.php';?>
 

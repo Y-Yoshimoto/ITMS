@@ -1,5 +1,5 @@
 <!--Header -->
-<?php $title ="Login";$pagecss ="./page.css"; require '../component/header.php';?>
+<?php $title ="ログイン";$pagecss ="../login/page.css"; require '../component/header.php';?>
 
 <div class="form-box">
     <!-- ログインフォーム -->
