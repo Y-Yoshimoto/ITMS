@@ -22,7 +22,8 @@ $('#myModal').on('show.bs.modal', function (event) {
             console.log(rcv_data);
 	    //setTimeout(function(){console.log(rcv_data.incidentName);},10000);
         //画面表示
-	    $("#incidentNameModal").text(rcv_data.incidentName);
+            $("#incidentNumberModal").val(rcv_data.incidentNumber);
+	        $("#incidentNameModal").text(rcv_data.incidentName);
             $("#servceModal").text(rcv_data.servce);
             $("#severityModal").val(rcv_data.severity);
             $("#briefModal").text(rcv_data.brief);
@@ -41,7 +42,7 @@ $('#myModal').on('show.bs.modal', function (event) {
     }).fail(function(rcv_data, textStatus, errorThrown){
             // エラー処理
             console.log(rcv_data);
-            $("#ErrorMessage").text("サポートへご連絡ください。");
+            $("#SystemMessage").text("サポートへご連絡ください。");
             //alert(errorThrown);
     }).always(function(){
     //ボタンの再有効化

@@ -15,15 +15,15 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><span id="incidentNameModal"></span></h5>
-        <!-- <h5 class="modal-title" id="exampleModalLabel"><textarea class="oneRow form-control" id="incidentNameModal" rows="1" required></textarea></h5> -->
+        <!-- <h3 class="modal-title" id="exampleModalLabel"><span id="incidentNameModal"></span></h3> -->
+        <textarea class="form-control oneRowArea oneRowLarge" id="incidentNameModal" rows="1" required></textarea>
         <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <!-- <h5>インシデント情報</h5> -->
-        <span id="ErrorMessage"></span>
+        <span id="SystemMessage"></span>
 	    <!-- サービス名: <span id="servceModal"></span><br>
             重要度: <span id="severityModal"></span><br>
             概要: <span id="briefModal"></span><br>
@@ -33,7 +33,7 @@
             更新時刻: <span id="updateTimeModal"></span><br> -->
             <form class="form-incidentdata">
             サービス名:
-            <textarea class="oneRow form-control" id="servceModal" rows="1" required></textarea>
+            <textarea class="oneRowArea form-control" id="servceModal" rows="1" required></textarea>
 
             <div class="form-group">
                 緊急度: <select class="custom-select selected colorSelect"　type="text" id="severityModal" required>
@@ -51,12 +51,13 @@
                 <textarea class="form-control" id="remarkModal" rows="3"></textarea>
                 登録時刻: <span id="recodeTimeModal"></span><br>
                 更新時刻: <span id="updateTimeModal"></span><br>
+                <input type="hidden" name="incidentNumber" id="incidentNumberModal">
             </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">更新</button>
+        <button type="button" class="btn btn-primary" id="updateIncidentAPICall" type="submit">更新</button>
+        <!-- <button type="button" class="btn btn-primary" id="updateIncidentAPICall" data-dismiss="modal">更新</button> -->
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-        <!--<button type="button" class="btn btn-primary">変更を保存</button>-->
       </div><!-- /.modal-footer -->
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -67,5 +68,6 @@
 <!-- include JavaScript -->
 <script src="./incidentCard.js"></script>
 <script src="./moreinfo.js"></script>
+<script src="./updateIncidentAPICall.js"></script>
 <!--footer -->
 <?php require '../component/footer.php'; ?>

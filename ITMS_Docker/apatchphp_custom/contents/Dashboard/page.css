@@ -15,11 +15,31 @@ html {
     border-radius: 10px;
     /*border-color : #FF0000;*/
 }
-/*一行テキストボックス*/
-.oneRow {
-    resize: none;
-    height:1em;
+.modal-header{
+    color: #FDFDFD;
+    background-color: #343A40;
 }
+
+/*一行テキストボックス*/
+.oneRowArea {
+    resize: none;
+    height:0.8em;
+    width: 70%;
+    border-width: 0px;
+    border-radius: 0px;
+    border-bottom-width: 2px;
+}
+.oneRowLarge {
+    height:1.75em;
+    width: 70%;
+    font-size: 1.75rem;
+    color: #FDFDFD;
+
+    border-color : #818A91;
+    background-color: #343A40;
+}
+
+
 /*選択肢背景色*/
 .selected {
     background-color: #FFFFFF;
