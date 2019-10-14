@@ -12,6 +12,7 @@ $(function(){
             'severity': Number($("#severityModal").val()),
             'brief': String($("#briefModal").val()),
             'handling': String($("#handlingModal").val()),
+            'remark': String($("#remarkModal").val()),
             'remark': String($("#remarkModal").val())
             }
         console.log("コンソール");

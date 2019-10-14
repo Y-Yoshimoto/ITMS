@@ -48,7 +48,7 @@ html {
 
 
 /*LSIZE*/
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1030px) {
     .container {
         max-width: 1024px;
         float: center;
@@ -62,13 +62,14 @@ html {
     }
 }
 /*MSIZE*/
-@media only screen and (min-width:580px) and (max-width:1023px) {
+@media only screen and (min-width:580px) and (max-width:1029px) {
     .container {
         width: 100%;
+        float: center;
     }
     .card-deck .card {
         margin-top: 10px;
-        max-width: 310px;
+        max-width: 250px;
         min-width: 250px;
         min-height: 300px;
     }
