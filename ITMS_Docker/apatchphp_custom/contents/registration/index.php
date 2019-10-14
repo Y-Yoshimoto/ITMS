@@ -11,12 +11,12 @@
      <div class="row">
          <div class="form-group col">
            <label for="Input">インシデント管理名</label>
-           <input type="text" class="form-control" id="incidentName" placeholder="" required>
+           <input type="text" class="form-control" id="incidentName" required>
          </div>
 
          <div class="form-group col">
              <label for="Input">対象サービス</label>
-             <input type="text" class="form-control" id="servce" placeholder="" required>
+             <input type="text" class="form-control" id="servce" required>
          </div>
 
     </div>

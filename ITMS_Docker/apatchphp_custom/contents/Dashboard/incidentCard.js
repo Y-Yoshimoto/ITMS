@@ -38,7 +38,7 @@ $(function(){
 function incidentCard(incidentNumber, servce, severity, incidentName, brief, recodeTime, updateTime) {
     var cardSetting = '<div class="card shadow-sm">';
     let sInfo = severityInfo(severity);
-    var cardHeader = '<div class="card-header" style="background-color :' + sInfo[0] + '"><h4 class="my-0 font-weight-normal">' + sInfo[1] + '</h4></div>';
+    var cardHeader = '<div class="card-header" style="background-color :' + sInfo[0] + '; color :' + sInfo[2] + '"><h4 class="my-0 font-weight-normal">' + sInfo[1] + '</h4></div>';
     var cardBody = '<div class="card-body"><h5 class="card-title pricing-card-title">' + incidentName + '</h5>' + brief;
     var cardInfo = '<ul class="list-unstyled mt-3 mb-4"><li>' + servce + '</li><li>更新: ' + recodeTime + '</li><li>登録: '+ updateTime + '</li></ul></div>';
     var cardFooter = '<button class="btn btn-light card-footer text-muted" type="button" data-toggle="modal" data-target="#myModal" data-recipient="'+ incidentNumber +'">' +'詳細/更新' + '</button><div>';
@@ -66,18 +66,18 @@ function incidentCard(incidentNumber, servce, severity, incidentName, brief, rec
      　</button>
     </div>
 */
-//緊急度判定
+//緊急度判定['背景色','テキスト','文字色']
 function severityInfo(severity){
     switch (Number(severity)){
         case 1:
-            return ['#56C0E0','情報'];
+            return ['#56C0E0','情報','#373A3C'];
         case 2:
-            return ['#FFEC86','警告'];
+            return ['#FFEC86','警告','#373A3C'];
         case 3:
-            return ['#EE9800','軽障害'];
+            return ['#EE9800','軽障害','#373A3C'];
         case 4:
-            return ['#D9534F','重障害'];
+            return ['#D9534F','重障害','#FDFDFD'];
         case 5:
-            return ['#CB2E25','致命的'];
+            return ['#CB2E25','致命的','#FDFDFD'];
         }
 }

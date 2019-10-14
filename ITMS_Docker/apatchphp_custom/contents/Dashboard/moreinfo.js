@@ -21,22 +21,39 @@ $('#myModal').on('show.bs.modal', function (event) {
             // 受信データ処理
             console.log(rcv_data);
 	    //setTimeout(function(){console.log(rcv_data.incidentName);},10000);
-	    $("#massage1").text(rcv_data.incidentName);
-            $("#message2").text(rcv_data.servce);
-            $("#message3").text(rcv_data.severity);
-            $("#message4").text(rcv_data.brief);
-            $("#message5").text(rcv_data.handling);
-            $("#message6").text(rcv_data.remark);
-            $("#message7").text(rcv_data.recodeTime);
-            $("#message8").text(rcv_data.updateTime);
+        //画面表示
+	    $("#incidentNameModal").text(rcv_data.incidentName);
+            $("#servceModal").text(rcv_data.servce);
+            $("#severityModal").val(rcv_data.severity);
+            $("#briefModal").text(rcv_data.brief);
+            $("#handlingModal").text(rcv_data.handling);
+            $("#remarkModal").text(rcv_data.remark);
+            $("#recodeTimeModal").text(rcv_data.recodeTime);
+            $("#updateTimeModal").text(rcv_data.updateTime);
+
+            //色指定
+            let sInfo = severityInfo(rcv_data.severity);
+            $('.modal-content').css('border-color',sInfo[0]);
+            $('.selected').css('background-color',sInfo[0]);
+            $('.selected').css('color',sInfo[2]);
+
             console.log("END");
     }).fail(function(rcv_data, textStatus, errorThrown){
             // エラー処理
             console.log(rcv_data);
-            $("#message9").text("サポートへご連絡ください。");
+            $("#ErrorMessage").text("サポートへご連絡ください。");
             //alert(errorThrown);
     }).always(function(){
     //ボタンの再有効化
         button.attr("disabled", false);
     })
+});
+
+$(function(){
+    $('.colorSelect').bind('change', function(){
+        let sInfo = severityInfo($(this).val());
+        $('.modal-content').css('border-color',sInfo[0]);
+        $('.selected').css('background-color',sInfo[0]);
+        $('.selected').css('color',sInfo[2]);
+    });
 });

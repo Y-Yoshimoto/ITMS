@@ -6,6 +6,27 @@ html {
     font-size: 16px;
   }
 }
+/*モーダル指定*/
+.modal-content{
+    color: #373A3C;
+    background-color: #FDFDFD;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    /*border-color : #FF0000;*/
+}
+/*一行テキストボックス*/
+.oneRow {
+    resize: none;
+    height:1em;
+}
+/*選択肢背景色*/
+.selected {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+
 /*LSIZE*/
 @media screen and (min-width:1024px) {
     .container {
@@ -28,7 +49,7 @@ html {
     .card-deck .card {
         margin-top: 10px;
         max-width: 310px;
-        min-width: 220px;
+        min-width: 250px;
         min-height: 300px;
     }
 }
