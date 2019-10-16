@@ -2,13 +2,13 @@
 <?php $title ="ダッシュボード";$pagecss ="../Dashboard/page.css"; require '../component/header.php';?>
 <!-- navbar -->
 <?php require '../component/navbar.php';?>
-<!--  カード -->
+<!-- インシデントカード -->
     <div class="container">
          <div id="incidentCard" class="card-deck text-left">
          <!-- insert from incidentCard.js> -->
     </div>
 
-<!-- モーダルの設定 -->
+<!-- インシデント情報更新(モーダル) -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
@@ -47,7 +47,7 @@
                 <input type="hidden" name="incidentNumber" id="incidentNumberModal">
             </form>
       </div>
-      <!-- モーダルフッター -->
+      <!-- モーダルフッター -->
       <div class="modal-footer">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="closedFlag">

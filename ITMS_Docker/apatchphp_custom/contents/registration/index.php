@@ -4,14 +4,15 @@
 <?php require '../component/navbar.php';?>
 
 <div class="form-box">
-    <!-- ログインフォーム -->
+
+<!-- インシデント登録フォーム -->
   <form class="form-incidentdata">
     <h3 class="h3 mb-3 font-weight-normal">インシデント登録</h3>
     <!-- メッセージ -->
     <p class="SysMessage" id="SysMessage"</p>
      <div class="row">
          <div class="form-group col">
-           <label for="Input">インシデント管理名</label>
+           <label for="Input">インシデント名</label>
            <input type="text" class="form-control" id="incidentName" required>
          </div>
 
@@ -50,6 +51,7 @@
 
     <button class="btn btn-lg btn-primary btn-block" id="registrationIncidentAPICall" type="submit">登録</button>
   </form>
+
 </div>
 
 <!--jquery, Bootstrap, popper -->

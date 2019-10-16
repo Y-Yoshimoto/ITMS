@@ -17,7 +17,7 @@
                 </ul>
             </div>
       <nav class="my-2 my-md-0 mr-md-3">
-        <!-- <input class="form-control" type="search" placeholder="検索..." aria-label="検索..."> -->
+        <!-- <input class="form-control" type="search" placeholder="キーワード" aria-label="検索"> -->
         <a class="btn btn-outline-info" href="#">検索</a>
         <a class="btn btn-outline-warning" href="/itms/login/">ログアウト</a>
       </nav>
