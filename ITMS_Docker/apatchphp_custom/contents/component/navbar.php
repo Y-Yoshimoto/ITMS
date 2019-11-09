@@ -12,6 +12,8 @@
                         <a class="nav-link" href="/itms/registration/">インシデント登録</a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link" href="/itms/alertlist/">アラートリスト</a>
+                      </li><li class="nav-item">
                         <a class="nav-link" href="#">管理</a>
                       </li>
                 </ul>

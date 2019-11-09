@@ -64,3 +64,14 @@ services:
             MONGO_INITDB_DATABASE: alertlist
         #volumes:
         #    - ./mongodb_data:/data/db
+    radis:
+        image: redis_custom
+        build: redis_custom
+        restart: always
+        ports:
+            - "6379:6379"
+        networks:
+            - default
+        # command: redis-server --appendonly yes
+        #volumes:
+        #    - /radis_data:/data
