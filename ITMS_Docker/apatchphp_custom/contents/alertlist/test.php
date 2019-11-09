@@ -4,7 +4,7 @@
 <?php require '../component/navbar.php';?>
 
 <?php
-    echo 'Echo Alertlist<br>';
+    echo '<h1>Echo Alertlist<br></h1>';
     $mongo = new MongoDB\Driver\Manager("mongodb://root:mongo@itms_docker_mongodb_1:27017");
 
     print_r($mongo);
@@ -20,7 +20,16 @@
     }
 
 ?>
+<?php
+    echo '<br><h1>Session<br></h1>';
+    $redis = new Redis();
+    $redis->connect('itms_docker_radis_1', 6379);
+    $allKeys = $redis->keys('*');
+    print_r( $allKeys );
+        echo'<br>';
 
+    $redis->set('key', 'value');
+?>
 
 
 <!--jquery, Bootstrap, popper -->
