@@ -1,0 +1,95 @@
+version: '3'
+services:
+    zabbix-ap:
+        image: zabbix-appg
+        build: zabbix-appg_custom
+        ports:
+            - "10051"
+        restart: always
+        depends_on:
+            - zabbix-timescaledb
+        environment:
+                TZ: Asia/Tokyo
+                DB_SERVER_HOST: zabbix-timescaledb
+                POSTGRES_USER: zabbix
+                POSTGRES_PASSWORD: zabbix
+                PHP_TZ: Asia/Tokyo
+        #logging:
+        #        driver: "journald"
+        volumes:
+            - ./snmp_data/snmptraps:/var/lib/zabbix/snmptraps
+            - ./snmp_data/mibs:/var/lib/zabbix/mibs
+        networks:
+            - samplezabbbix_default
+            - itms_docker_default
+
+    zabbix-web:
+        image: zabbix-webpg
+        build: zabbix-webpg_custom
+        restart: always
+        ports:
+            - "80"
+            - "443"
+        depends_on:
+            - zabbix-timescaledb
+            - zabbix-ap
+        environment:
+            TZ: Asia/Tokyo
+            DB_SERVER_HOST: zabbix-timescaledb
+            POSTGRES_USER: zabbix
+            POSTGRES_PASSWORD: zabbix
+            ZBX_SERVER_HOST: zabbix-ap
+            PHP_TZ: Asia/Tokyo
+        #logging:
+        #        driver: "journald"
+        networks:
+            - itms_docker_default
+            - samplezabbbix_default
+
+    zabbix-timescaledb:
+        image: zabbix-timescaledb
+        build: timescaledb_custom
+        ports:
+            - "5432"
+        restart: always
+        environment:
+            TZ: Asia/Tokyo
+            POSTGRES_DATABASE: zabbix
+            POSTGRES_USER: zabbix
+            POSTGRES_PASSWORD: zabbix
+            POSTGRES_DB: zabbix
+        #logging:
+        #        driver: "journald"
+        # volumes:
+        #     - ./db_data:/var/lib/postgresql/data
+
+    zabbix-snmptraps:
+        image: zabbix-snmptraps
+        build: zabbix-snmptraps_custom
+        ports:
+            - "162"
+            - "162/udp"
+        restart: always
+        #logging:
+        #        driver: "jounald"
+        volumes:
+            - ./snmp_data/snmptraps:/var/lib/zabbix/snmptraps
+            - ./snmp_data/mibs:/var/lib/zabbix/mibs
+
+    zabbix-agent:
+        image: zabbix-agent
+        build: zabbix-agent_custom
+        ports:
+            - "10050"
+        restart: always
+        environment:
+            - ZBX_HOSTNAME=ZabbixServer
+            - ZBX_SERVER_HOST=samplezabbbix_zabbix-ap_1
+        #logging:
+        #        driver: "jounald"
+
+networks:
+    itms_docker_default:
+        external: true
+    samplezabbbix_default:
+        external: true
