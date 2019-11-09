@@ -6,5 +6,4 @@ MAINTAINER y.yoshimoto
 # COPY postgresql.conf /var/lib/postgresql/data/postgresql.conf
 
 # 初期構築データのコピー
-#COPY zabbix_startup.sql /docker-entrypoint-initdb.d/zabbix_startup.sql
-#COPY enable_timescaledb.sql /docker-entrypoint-initdb.d/enable_timescaledb.sql
+COPY zabbix_startup.sql /docker-entrypoint-initdb.d/zabbix_startup.sql

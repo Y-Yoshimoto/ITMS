@@ -1,4 +1,5 @@
-<!--Header -->
+<?php session_start(); ?>
+
 <?php $title ="アラートリスト";$pagecss ="../alertlist/page.css"; require '../component/header.php';?>
 <!-- navbar -->
 <?php require '../component/navbar.php';?>
@@ -28,7 +29,12 @@
     print_r( $allKeys );
         echo'<br>';
 
-    $redis->set('key', 'value');
+        
+        echo "save_handler=" . ini_get("session.save_handler") . "\n";
+        echo "save_path=" . ini_get("session.save_path") . "\n";
+        echo "session_id=" . session_id() . "\n";
+
+        $_SESSION['libname'] = "PhpRedis";
 ?>
 
 
