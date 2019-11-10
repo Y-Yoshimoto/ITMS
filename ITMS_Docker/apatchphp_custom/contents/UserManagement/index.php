@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="ChangeAuthority_Message"></p>
-            <button class="btn btn-lg btn-info btn-offset btn-sm" id="ChangeAuthority" type="submit">権限</button>
+            <button class="btn btn-lg btn-info btn-offset btn-sm" id="ChangeAuthority" type="submit">変更</button>
                 </div>
             </div>
         </form><hr>

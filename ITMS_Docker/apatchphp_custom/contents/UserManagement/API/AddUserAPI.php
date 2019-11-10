@@ -1,4 +1,5 @@
 <?php
+    //ユーザ追加
     header("Content-Type: application/json; charset=UTF-8");
     //POSTされた値の取得
     $userID = filter_input(INPUT_POST, 'userID');
