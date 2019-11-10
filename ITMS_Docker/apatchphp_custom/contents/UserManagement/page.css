@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+html,
+html {
+  font-size: 14px;
+}
+@media (min-width: 580px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.btn-offset{
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.h3{
+    font-size: 24px;
+    margin-top: 10px;
+}

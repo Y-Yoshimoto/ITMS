@@ -2,24 +2,22 @@ NAME=ITMS
 VERSION=0.2
 
 build:
-	docker-compose build --no-cache
+	docker-compose build
 
 start:
 	docker-compose up -d
 	docker ps -a
 
 rebuild:
-	docker-compose build
+	docker-compose build --no-cache
 	docker-compose down
-	docker-compose up -d
+	docker-compose up -d --build
 	docker ps -a
 
 restart:
-	docker-compose restart
+	docker-compose build
+	docker-compose up -d --build
 	docker ps -a
-
-clean:
-	docker-compose down
 
 down:
 	docker-compose down
