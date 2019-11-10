@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-8">
             削除対象ユーザーID<label for="inputEmail" class="sr-only">ユーザーID</label>
-            <input type="email" id="inputUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            <input type="email" id="DellteUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
                 </div>
                 <div class="col-4">
                 <p class="SysMessage" id="DellteUser_Message"></p>
@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-8">
             変更対象ユーザーID<label for="inputEmail" class="sr-only">ユーザーID</label>
-            <input type="email" id="inputUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            <input type="email" id="ChangeUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
             <div class="Input">
             <label for="newAuthority"></label>
             権限<select class="custom-select custom-select-sm"　type="text" id="severity" required>
@@ -85,8 +85,8 @@
                 <h3 class="h3 mb-3 font-weight-normal">パスワードリセット</h3>
             <div class="row">
                 <div class="col-8">
-            対象ユーザーID<label for="ResetUser" class="sr-only">ユーザーID</label>
-            <input type="email" id="ResetUser" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            対象ユーザーID<label for="ResetUserID" class="sr-only">ユーザーID</label>
+            <input type="email" id="ResetUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
                 </div>
                 <div class="col-4">
                 <p class="SysMessage" id="ResetUser_Message"></p>
@@ -99,8 +99,10 @@
     <!-- ユーザ一覧 -->
     <div class="col-12 col-md-6 px-lg-5 border bg-light">
     <h3 class="h3 mb-3 font-weight-normal">ユーザ一覧</h3>
+
         <!--  ユーザ一覧表　------------------------------->
     <table class="table table-striped table-hover">
+        <caption id="getListMessage">更新:</caption>
         <!-- ヘッダー　------------------------------->
       <thead class="thead-dark">
         <tr>
@@ -110,19 +112,15 @@
       </tr>
       </thead>
         <!-- データ　------------------------------->
-      <tbody>
-        <tr><th scope="row">1</th><td>Admin</td><td>管理者</td></tr>
-        <tr><th scope="row">2</th><td>y-yoshimoto</td><td>管理者</td></tr>
-        <tr><th scope="row">3</th><td>test</td><td>一般ユーザ</td></tr>
+      <tbody  id="UserLiset_th">
       </tbody>
     </table>
-
     </div>
   </div>
 </div>
 <!--jquery, Bootstrap, popper -->
 <?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->
-<script src="./registrationIncidentAPICall.js"></script>
+<script src="./userListAPICall.js"></script>
 <!--footer -->
 <?php require '../component/footer.php'; ?>

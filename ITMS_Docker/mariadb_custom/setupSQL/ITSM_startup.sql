@@ -12,7 +12,7 @@ CREATE TABLE t_userdata (
     userid VARCHAR(64) NOT NULL, -- ユーザー名
     Authority int NOT NULL, -- Admin:1, General:2
     password VARCHAR(64),   -- パスワード
-    deleteFlag int NOT NULL -- 削除フラッグ(1:削除+パスワード空白)
+    deleteFlag int NOT NULL -- 削除フラッグ(0:有効,1:削除+パスワード空白)
 );
 INSERT INTO t_userdata VALUES (1,'Admin',1,'dc647eb65e6711e155375218212b3964',0);
 INSERT INTO t_userdata VALUES (2,'y-yoshimoto',1,'dc647eb65e6711e155375218212b3964',0);

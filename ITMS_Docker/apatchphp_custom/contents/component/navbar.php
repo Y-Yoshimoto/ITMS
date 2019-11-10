@@ -36,7 +36,8 @@
         <!-- 検索ボックス -->
         <form class="form-inline my-2 my-lg-0">
             <!-- <input class="form-control" type="search" placeholder="キーワード" aria-label="検索"> -->
-            <a class="btn btn-outline-info" href="#">検索</a>
+            <a class="btn btn-outline-info" href="#">検索</a>&nbsp;
+            <a class="btn btn-outline-danger" href="../../zabbix/">Zabbix</a>&nbsp;
             <a class="btn btn-outline-warning" href="/itms/login/">ログアウト</a>
         </form>
       </div><!-- /.navbar-collapse -->
