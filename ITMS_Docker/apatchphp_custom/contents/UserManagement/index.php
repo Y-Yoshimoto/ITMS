@@ -14,12 +14,20 @@
             <div class="row">
                 <div class="col-8">
             登録ユーザーID<label for="inputUserID" class="sr-only">登録ユーザーID</label>
-            <input type="email" id="inputUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            <input type="text" id="inputUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
             登録パスワード<label for="inputPassword" class="sr-only">パスワード</label>
             <input type="password" id="inputPassword" class="form-control form-control-sm" placeholder="パスワード" required>
+            <div class="Input">
+            <label for="newAuthority"></label>
+            権限<select class="custom-select custom-select-sm"　type="text" id="inputAuthority" required>
+              <option selected>(選択して下さい)</option>
+              <option value="1">管理者</option>
+              <option value="2">一般ユーザ</option>
+                </select>
                 </div>
+            </div>
                 <div class="col-4">
-                <p class="SysMessage" id="AddUser_Message"></p>
+                <p class="SysMessage-sm" id="AddUser_Message"></p>
             <button class="btn btn-lg btn-primary btn-offset" id="AddUser" type="submit">登録</button>
                 </div>
             </div>
@@ -34,7 +42,7 @@
             <input type="email" id="DellteUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
                 </div>
                 <div class="col-4">
-                <p class="SysMessage" id="DellteUser_Message"></p>
+                <p class="SysMessage-sm" id="DellteUser_Message"></p>
             <button class="btn btn-lg btn-danger btn-offset" id="DellteUser" type="submit">削除</button>
                 </div>
             </div>
@@ -49,7 +57,7 @@
             <input type="email" id="ChangeUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
             <div class="Input">
             <label for="newAuthority"></label>
-            権限<select class="custom-select custom-select-sm"　type="text" id="severity" required>
+            権限<select class="custom-select custom-select-sm"　type="text" id="newAuthority" required>
               <option selected>(選択して下さい)</option>
               <option value="1">管理者</option>
               <option value="2">一般ユーザ</option>
@@ -57,7 +65,7 @@
           </div>
                 </div>
                 <div class="col-4">
-                <p class="SysMessage" id="ChangeAuthority_Message"></p>
+                <p class="SysMessage-sm" id="ChangeAuthority_Message"></p>
             <button class="btn btn-lg btn-info btn-offset" id="ChangeAuthority" type="submit">権限</button>
                 </div>
             </div>
@@ -74,7 +82,7 @@
             <input type="password" id="RenewPassword" class="form-control form-control-sm" placeholder="パスワード" required>
                 </div>
                 <div class="col-4">
-                <p class="SysMessage" id="ChangePassword_Message"></p>
+                <p class="SysMessage-sm" id="ChangePassword_Message"></p>
             <button class="btn btn-lg btn-warning btn-offset" id="ChangePassword" type="submit">更新</button>
                 </div>
             </div>
@@ -89,7 +97,7 @@
             <input type="email" id="ResetUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
                 </div>
                 <div class="col-4">
-                <p class="SysMessage" id="ResetUser_Message"></p>
+                <p class="SysMessage-sm" id="ResetUser_Message"></p>
             <button class="btn btn-lg btn-success btn-offset" id="ResetUser" type="submit">リセット</button>
                 </div>
             </div>
@@ -122,5 +130,10 @@
 <?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->
 <script src="./userListAPICall.js"></script>
+<script src="./API/AddUserAPICall.js"></script>
+<script src="./API/DellteUserAPICall.js"></script>
+<script src="./API/ChangeAuthorityAPICall.js"></script>
+<script src="./API/ChangePasswordAPICall.js"></script>
+<script src="./API/ResetUserAPICall.js"></script>
 <!--footer -->
 <?php require '../component/footer.php'; ?>

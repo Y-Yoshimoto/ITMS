@@ -8,7 +8,7 @@
     <h3 class="h3 mb-3 font-weight-normal">ITSM ログイン</h3>
     <!-- インプット`` -->
     <label for="inputEmail" class="sr-only">ユーザーID</label>
-    <input type="email" id="inputUserID" class="form-control" placeholder="ユーザーID" required autofocus>
+    <input type="text" id="inputUserID" class="form-control" placeholder="ユーザーID" required autofocus>
     <label for="inputPassword" class="sr-only">パスワード</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
 

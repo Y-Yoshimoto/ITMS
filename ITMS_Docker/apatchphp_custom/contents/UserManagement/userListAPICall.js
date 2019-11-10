@@ -1,6 +1,6 @@
 //ユーザリスト取得
 $(function(){
-    getUserList()
+    getUserList();
 })
 
 function getUserList() {

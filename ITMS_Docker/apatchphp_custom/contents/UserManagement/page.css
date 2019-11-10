@@ -21,3 +21,8 @@ html {
     font-size: 24px;
     margin-top: 10px;
 }
+
+.SysMessage-sm{
+    font-size: 14px;
+    color: #818A91;
+}
