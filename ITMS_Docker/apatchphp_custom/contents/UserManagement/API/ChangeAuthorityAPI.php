@@ -34,7 +34,7 @@
         error_log("$sql");
         //SQL発行
         $insert = $dbh->exec($sql);
-        $result = $insert >= 0 ? '0':'1';
+        $result = $insert >= 1 ? '0':'1';
         //出力結果確認:;
         error_log($result);
         return $result;
