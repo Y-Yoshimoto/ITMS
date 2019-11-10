@@ -38,8 +38,8 @@
                 <h3 class="h3 mb-3 font-weight-normal">ユーザ削除</h3>
             <div class="row">
                 <div class="col-8">
-            削除対象ユーザーID<label for="inputEmail" class="sr-only">ユーザーID</label>
-            <input type="email" id="DellteUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            削除対象ユーザーID<label for="inputUserID" class="sr-only">ユーザーID</label>
+            <input type="text" id="DellteUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
                 </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="DellteUser_Message"></p>
@@ -53,8 +53,8 @@
                 <h3 class="h3 mb-3 font-weight-normal">権限変更</h3>
             <div class="row">
                 <div class="col-8">
-            変更対象ユーザーID<label for="inputEmail" class="sr-only">ユーザーID</label>
-            <input type="email" id="ChangeUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            変更対象ユーザーID<label for="inputUserID" class="sr-only">ユーザーID</label>
+            <input type="text" id="ChangeUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
             <div class="Input">
             <label for="newAuthority"></label>
             権限<select class="custom-select custom-select-sm"　type="text" id="newAuthority" required>
@@ -94,11 +94,11 @@
             <div class="row">
                 <div class="col-8">
             対象ユーザーID<label for="ResetUserID" class="sr-only">ユーザーID</label>
-            <input type="email" id="ResetUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
+            <input type="text" id="ResetUserID" class="form-control form-control-sm" placeholder="ユーザーID" required autofocus>
                 </div>
                 <div class="col-4">
-                <p class="SysMessage-sm" id="ResetUser_Message"></p>
-            <button class="btn btn-lg btn-success btn-offset btn-sm" id="ResetUser" type="submit">リセット</button>
+                <p class="SysMessage-sm" id="ResetPassword_Message"></p>
+            <button class="btn btn-lg btn-success btn-offset btn-sm" id="ResetPassword" type="submit">リセット</button>
                 </div>
             </div>
         </form><br>
@@ -127,21 +127,6 @@
   </div>
 </div>
 
-<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-  <div class="toast" style="position: absolute; top: 0; right: 0;">
-    <div class="toast-header">
-      <strong class="mr-auto">Bootstrap</strong>
-      <small>11分前</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="閉じる">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      こんにちは！ これはトーストのメッセージです。
-    </div>
-  </div>
-</div>
-
 <!--jquery, Bootstrap, popper -->
 <?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->
@@ -150,6 +135,6 @@
 <script src="./API/DellteUserAPICall.js"></script>
 <script src="./API/ChangeAuthorityAPICall.js"></script>
 <script src="./API/ChangePasswordAPICall.js"></script>
-<script src="./API/ResetUserAPICall.js"></script>
+<script src="./API/ResetPasswordAPICall.js"></script>
 <!--footer -->
 <?php require '../component/footer.php'; ?>
