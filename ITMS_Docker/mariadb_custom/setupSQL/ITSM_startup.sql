@@ -9,7 +9,7 @@ use itms;
 -- User data
 CREATE TABLE t_userdata (
     userNumber int PRIMARY KEY,  -- プライマーキー
-    userid VARCHAR(64) NOT NULL, -- ユーザー名
+    userid VARCHAR(64) UNIQUE NOT NULL, -- ユーザー名
     Authority int NOT NULL, -- Admin:1, General:2
     password VARCHAR(64),   -- パスワード
     deleteFlag int NOT NULL -- 削除フラッグ(0:有効,1:削除+パスワード空白)

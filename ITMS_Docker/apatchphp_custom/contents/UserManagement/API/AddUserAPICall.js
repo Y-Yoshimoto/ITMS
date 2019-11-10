@@ -1,4 +1,4 @@
-//ログイン認証
+//ユーザ追加
 $(function(){
     $('#AddUser').click(function() {
         //多重送信防止//ボタンの無効化

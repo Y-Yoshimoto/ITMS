@@ -28,7 +28,7 @@
             </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="AddUser_Message"></p>
-            <button class="btn btn-lg btn-primary btn-offset" id="AddUser" type="submit">登録</button>
+            <button class="btn btn-lg btn-primary btn-offset btn-sm" id="AddUser" type="submit">登録</button>
                 </div>
             </div>
         </form><hr>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="DellteUser_Message"></p>
-            <button class="btn btn-lg btn-danger btn-offset" id="DellteUser" type="submit">削除</button>
+                <button class="btn btn-lg btn-danger btn-offset btn-sm" id="DellteUser" type="submit">削除</button>
                 </div>
             </div>
         </form><hr>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="ChangeAuthority_Message"></p>
-            <button class="btn btn-lg btn-info btn-offset" id="ChangeAuthority" type="submit">権限</button>
+            <button class="btn btn-lg btn-info btn-offset btn-sm" id="ChangeAuthority" type="submit">権限</button>
                 </div>
             </div>
         </form><hr>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="ChangePassword_Message"></p>
-            <button class="btn btn-lg btn-warning btn-offset" id="ChangePassword" type="submit">更新</button>
+            <button class="btn btn-lg btn-warning btn-offset btn-sm" id="ChangePassword" type="submit">更新</button>
                 </div>
             </div>
         </form><hr>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-4">
                 <p class="SysMessage-sm" id="ResetUser_Message"></p>
-            <button class="btn btn-lg btn-success btn-offset" id="ResetUser" type="submit">リセット</button>
+            <button class="btn btn-lg btn-success btn-offset btn-sm" id="ResetUser" type="submit">リセット</button>
                 </div>
             </div>
         </form><br>
@@ -126,6 +126,22 @@
     </div>
   </div>
 </div>
+
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+  <div class="toast" style="position: absolute; top: 0; right: 0;">
+    <div class="toast-header">
+      <strong class="mr-auto">Bootstrap</strong>
+      <small>11分前</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="閉じる">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      こんにちは！ これはトーストのメッセージです。
+    </div>
+  </div>
+</div>
+
 <!--jquery, Bootstrap, popper -->
 <?php require '../component/inclode.php'; ?>
 <!-- include JavaScript -->

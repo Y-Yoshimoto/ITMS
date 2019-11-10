@@ -5,13 +5,12 @@
     $password = filter_input(INPUT_POST, 'password');
     $authority= filter_input(INPUT_POST, 'authority');
 
-    //処理結果再送
+    //処理結果送信
     echo json_encode(AddUser($userID, md5($password),$authority));
     exit;
 ?>
 
 <?php
-    //ユーザ認証
     function AddUser($userID, $md5password,$authority){
         $statusCode = calldatabase($userID, $md5password,$authority);
         error_log("StatusCode:"."$statusCode");
