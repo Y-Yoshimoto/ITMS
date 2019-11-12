@@ -43,7 +43,7 @@
 </div>
 
      <div class="col-12 col-md-8 px-lg-2 border bg-light">
-    <h4>対応インシデント</h4>
+    <h4>対応アラート</h4>
     <table class="table">
         <caption id="getListMessage">更新:</caption>
         <!-- ヘッダー　------------------------------->
@@ -62,7 +62,7 @@
       </tbody>
   </table>
 
-<h4>未割当インシデント</h4>
+<h4>未割当アラート</h4>
 <table class="table table-striped">
     <!-- ヘッダー　------------------------------->
   <thead class="thead-dark">
