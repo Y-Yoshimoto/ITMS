@@ -4,7 +4,8 @@
 <?php require '../component/navbar.php';?>
 
 <div class="container">
-  <div class="row mx-lg-n5">
+  <div class="row">
+            <div class="col-12 border bg-light">
     <h4>アラート一覧</h4>
     <table class="table table-hover">
         <caption id="getListMessage">更新:</caption>
@@ -23,6 +24,7 @@
       <tbody  id="setAlertList_th">
       </tbody>
   </table>
+</div>
 </div>
 </div>
 
