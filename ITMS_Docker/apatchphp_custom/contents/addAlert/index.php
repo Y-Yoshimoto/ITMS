@@ -5,6 +5,7 @@
     error_log($json_string);
     $contents = json_decode($json_string, true);
 
+    //受信データ整形
     $Alert = "{".$contents['Senddata']['Service'].",".$contents['Senddata']['Subject'].",".$contents['Senddata']['Message']."}";
     error_log("Alert");
     error_log(print_r($Alert, true));
@@ -12,6 +13,7 @@
     error_log($AlertArray);
     error_log(print_r($AlertArray, true));
 
+    //MongoDB接続
     error_log("Mongo");
     $mongo = new MongoDB\Driver\Manager("mongodb://root:mongo@itms_docker_mongodb_1:27017");
     error_log(print_r($mongo, true));

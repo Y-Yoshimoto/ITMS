@@ -1,4 +1,4 @@
-$(document).on('click', '.SetINumber', function() {
+$(document).on('click', '.ResetINumber', function() {
     //多重送信防止//ボタンの無効化
     var button = $(this);
     button.attr("disabled", true);
@@ -9,7 +9,7 @@ $(document).on('click', '.SetINumber', function() {
     console.log(sed_data)
     // Ajax通信
     $.post({ //POST形式
-        url: "./Set_INumber.php", //URL
+        url: "./Reset_INumber.php", //URL
         data: sed_data, //送信JSONデータ
         dataType: "json", //受信データ
     }).done(function(rcv_data) {

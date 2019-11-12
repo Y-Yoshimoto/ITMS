@@ -17,14 +17,14 @@ function getAlertList() {
             //割当済みインシデント
             for (let i of AlertListSet) {
                 //console.log(i);
-                var row = makeAlertRow(i);
+                var row = makeSetAlertRow(i);
                 //表データ追加
                 $("#setAlertList_th").append(row);
             }
             //未割当インシデント
             for (let i of AlertListUnset) {
                 //console.log(i);
-                var row = makeAlertRow(i);
+                var row = makeUnsetAlertRow(i);
                 //表データ追加
                 $("#unsetAlertList_th").append(row);
             }
@@ -44,18 +44,19 @@ function getAlertList() {
         })
     })
 }
-
-function makeAlertRow(AlertRow) {
-    //console.log(AlertRow);
-    //権限表記変更
-    //var Authority = AuthoritySet(AlertRow['Authority']);
-    //List要素生成
+function makeSetAlertRow(AlertRow) {
     var row1 = '<tr>'
-    var row2 = '<th scope="row">' + AlertRow['servce'] + '</th><td>' + AlertRow['alertName'] + '</td><td>' + AlertRow['Hostname'] + '</td><td>' + AlertRow['alertTime'] + '</td><td>';
-    var row3 = '<button class="SetINumber btn btn-light btn-sm btn-outline-secondary" value="'+ AlertRow['_id']['$oid'] +'">' +'割当' + '</button></td></tr>';
-    //console.log(row1 + row2);
+    var row2 = '<th scope="row">' + AlertRow['eventID']  +'</th><td>' + AlertRow['servce'] + '</th><td>' + AlertRow['alertName'] + '</td><td>' + AlertRow['Hostname'] + '</td><td>' + AlertRow['alertTime'] + '</td><td>';
+    var row3 = '<button class="ResetINumber btn-light btn-sm btn-outline-secondary" value="'+ AlertRow['_id']['$oid'] +'">' +'解除' + '</button></td></tr>';
     return row1 + row2 + row3;
 }
+function makeUnsetAlertRow(AlertRow) {
+    var row1 = '<tr>'
+    var row2 = '<th scope="row">' + AlertRow['eventID']  +'</th><td>' + AlertRow['servce'] + '</th><td>' + AlertRow['alertName'] + '</td><td>' + AlertRow['Hostname'] + '</td><td>' + AlertRow['alertTime'] + '</td><td>';
+    var row3 = '<button class="SetINumber btn-light btn-sm btn-outline-secondary" value="'+ AlertRow['_id']['$oid'] +'">' +'紐付け' + '</button></td></tr>';
+    return row1 + row2 + row3;
+}
+
 //権限表記変更
 function AuthoritySet(Authority) {
     switch (Number(Authority)) {

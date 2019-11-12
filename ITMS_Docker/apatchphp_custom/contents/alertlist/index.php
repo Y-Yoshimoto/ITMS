@@ -43,46 +43,46 @@
 </div>
 
      <div class="col-12 col-md-8 px-lg-2 border bg-light">
-    <h4>対応インシデント</h3>
+    <h4>対応インシデント</h4>
     <table class="table">
         <caption id="getListMessage">更新:</caption>
         <!-- ヘッダー　------------------------------->
       <thead class="thead-dark">
         <tr>
-          <th>システム</th>
+          <th>ID</th>
+          <th scope="col">システム</th>
           <th scope="col">アラート名</th>
           <th scope="col">ホスト名</th>
           <th scope="col">発生時刻</th>
-          <th scope="col">インシデント</th>
+          <th scope="col">解除</th>
       </tr>
       </thead>
         <!-- データ　------------------------------->
       <tbody  id="setAlertList_th">
       </tbody>
+  </table>
 
-    </table>
-
-<h4>未割当インシデント</h3>
+<h4>未割当インシデント</h4>
 <table class="table table-striped">
     <!-- ヘッダー　------------------------------->
   <thead class="thead-dark">
     <tr>
-      <th>システム</th>
+      <th>ID</th>
+      <th scope="col">システム</th>
       <th scope="col">アラート名</th>
       <th scope="col">ホスト名</th>
       <th scope="col">発生時刻</th>
-      <th scope="col">インシデント</th>
+      <th scope="col">紐付け</th>
   </tr>
   </thead>
     <!-- データ　------------------------------->
-    <form>
-    <tbody  id="unsetAlertList_th">
-    </tbody></form>
 
+    <tbody  id="unsetAlertList_th">
+    </tbody>
+    </table>
      </div>
   </div>
 </div>
-
 
 <!--jquery, Bootstrap, popper -->
 <?php require '../component/inclode.php'; ?>
@@ -90,6 +90,6 @@
 <script src="./incidentDataAPICall.js"></script>
 <script src="./alertlistAPICall.js"></script>
 <script src="./Set_INumber.js"></script>
-
+<script src="./Reset_INumber.js"></script>
 <!--footer -->
 <?php require '../component/footer.php'; ?>
