@@ -50,9 +50,9 @@ function makeAlertRow(AlertRow) {
     //権限表記変更
     //var Authority = AuthoritySet(AlertRow['Authority']);
     //List要素生成
-    var row1 = '<tr id="' + AlertRow['_id']['$oid'] + '">'
-    var row2 = '<th scope="row">' + AlertRow['servce'] + '</th><td>' + AlertRow['alertName'] + '</td><td>' + AlertRow['Hostname'] + '</td><td>' + AlertRow['alertTime'] + '</td><td>' + AlertRow['incidentNumber'] + '</td></tr>';
-    var row3 = ''
+    var row1 = '<tr>'
+    var row2 = '<th scope="row">' + AlertRow['servce'] + '</th><td>' + AlertRow['alertName'] + '</td><td>' + AlertRow['Hostname'] + '</td><td>' + AlertRow['alertTime'] + '</td><td>';
+    var row3 = '<button class="SetINumber btn btn-light btn-sm btn-outline-secondary" value="'+ AlertRow['_id']['$oid'] +'">' +'割当' + '</button></td></tr>';
     //console.log(row1 + row2);
     return row1 + row2 + row3;
 }

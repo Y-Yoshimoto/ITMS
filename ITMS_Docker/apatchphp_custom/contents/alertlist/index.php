@@ -75,8 +75,9 @@
   </tr>
   </thead>
     <!-- データ　------------------------------->
+    <form>
     <tbody  id="unsetAlertList_th">
-    </tbody>
+    </tbody></form>
 
      </div>
   </div>
@@ -88,5 +89,7 @@
 <!-- include JavaScript -->
 <script src="./incidentDataAPICall.js"></script>
 <script src="./alertlistAPICall.js"></script>
+<script src="./Set_INumber.js"></script>
+
 <!--footer -->
 <?php require '../component/footer.php'; ?>
