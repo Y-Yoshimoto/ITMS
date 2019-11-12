@@ -5,7 +5,7 @@ $(function () {
 
 function getAlertList() {
     $(function () {
-        $.get({//POST形式
+        $.get({//get形式
             url: "./alertListAPI.php",    //URL
             dataType: "json",                //受信データ
         }).done(function (rcv_data) {

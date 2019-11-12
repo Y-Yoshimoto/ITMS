@@ -54,6 +54,7 @@
             <label class="form-check-label">完了</label>
             <!-- <label class="form-check-label checkBoxLabel">完了</label> -->
         </div>
+        <a class="btn btn-info" id="22" href="/itms/alertlist/">アラート管理</a>
         <button type="button" class="btn btn-primary" id="updateIncidentAPICall" type="submit">更新</button>
         <!-- <button type="button" class="btn btn-primary" id="updateIncidentAPICall" data-dismiss="modal">更新</button> -->
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>

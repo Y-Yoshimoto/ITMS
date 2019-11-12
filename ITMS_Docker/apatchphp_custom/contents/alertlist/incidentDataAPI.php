@@ -1,14 +1,13 @@
 <?php
     //incidentInfoAPI
     header("Content-Type: application/json; charset=UTF-8");
-    //POSTdata
-    $incidentNumber = filter_input(INPUT_POST, 'incidentNumber');
-    error_log("Info"."$incidentNumber");
+    //Redisデータ取得
 
-    //SET incidentNumber
+    //Get incidentNumber
     $redis = new Redis();
     $redis->connect('itms_docker_radis_1', 6379);
-    $redis->set('incidentNumber', $incidentNumber);
+    $incidentNumber = $redis->get('incidentNumber');
+    error_log("Data"."$incidentNumber");
 
     //jsonsend
     echo json_encode(getIncidentInfo($incidentNumber));

@@ -30,7 +30,7 @@
 			    print_r( $allKeys );
 			            echo'<br>';
 
-			            
+
 			            echo "save_handler=" . ini_get("session.save_handler") . "\n";
 				            echo "save_path=" . ini_get("session.save_path") . "\n";
 				            echo "session_id=" . session_id() . "\n";
@@ -45,4 +45,3 @@
 <script src="./alertlistAPICall.js"></script> -->
 <!--footer -->
 <?php require '../component/footer.php'; ?>
-

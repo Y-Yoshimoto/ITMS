@@ -1,18 +1,23 @@
 //インシデント情報
+//$(function () {
+//    $('#getincidentData').click(function () {
 $(function () {
-    $('#getincidentData').click(function () {
+    getincidentData();
+})
+
+function getincidentData() {
+    $(function () {
         //多重送信防止//ボタンの無効化
         var button = $(this);
         button.attr("disabled", true);
         //　JSON形式に変形
         var sed_data = {
-            'incidentNumber': "2"
-            //'incidentNumber': iNUmber
+            'incidentNumber': "-"
         }
         console.log(sed_data)
         // Ajax通信
         $.post({//POST形式
-            url: "../Dashboard/incidentInfoAPI.php",    //URL
+            url: "./incidentDataAPI.php",    //URL
             data: sed_data,   //送信JSONデータ
             dataType: "json",                //受信データ
         }).done(function (rcv_data) {
@@ -47,7 +52,8 @@ $(function () {
             button.attr("disabled", false);
         })
     });
-});
+};
+
 //緊急度判定['背景色','テキスト','文字色']
 function severityInfo(severity) {
     switch (Number(severity)) {

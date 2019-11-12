@@ -10,8 +10,14 @@
 <?php
     //インシデントリスト取得
     function getAlertList(){
+    //Get incidentNumber
+    $redis = new Redis();
+    $redis->connect('itms_docker_radis_1', 6379);
+    $incidentNumber = $redis->get('incidentNumber');
+    error_log("Alert"."$incidentNumber");
+
     //MongoDB問い合わせ
-    $AlertListSet = calldatabase("1");
+    $AlertListSet = calldatabase($incidentNumber);
     $AlertListUnset = calldatabase("-");
     $AlertList = [$AlertListSet, $AlertListUnset];
 
