@@ -23,3 +23,6 @@ return JSON.stringify({
         'endpoint': 'itms'
     }
 });
+
+//Action
+// "severity":"{EVENT.SEVERITY}","Hostname":"{HOST.NAME}","alertBrief":"{ITEM.NAME1} {ITEM.LASTVALUE}","alertTime":"{EVENT.DATE} {EVENT.TIME}","eventID":"{EVENT.ID}","incidentNumber":"-"

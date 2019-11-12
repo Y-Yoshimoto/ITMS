@@ -23,7 +23,7 @@ $(function () {
             $("#incidentNumber").val(rcv_data.incidentNumber);
             $("#incidentName").text(rcv_data.incidentName);
             $("#servce").text(rcv_data.servce);
-            $("#severity").val(rcv_data.severity);
+            $("#severity").text(severityInfo(rcv_data.severity)[1]);
             $("#brief").text(rcv_data.brief);
             $("#handling").text(rcv_data.handling);
             $("#remark").text(rcv_data.remark);
@@ -32,8 +32,8 @@ $(function () {
 
             //色指定
             let sInfo = severityInfo(rcv_data.severity);
-            $('.selected').css('background-color', sInfo[0]);
-            $('.selected').css('color', sInfo[2]);
+            $('.severity').css('background-color', sInfo[0]);
+            $('.severity').css('color', sInfo[2]);
 
             console.log("END");
         }).fail(function (rcv_data, textStatus, errorThrown) {

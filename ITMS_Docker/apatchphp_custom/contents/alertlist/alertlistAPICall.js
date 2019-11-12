@@ -12,15 +12,28 @@ function getAlertList() {
             // 受信データ処理
             console.log("GET:alertListAPI");
             console.log(rcv_data);
-            for (let i of rcv_data) {
+            var AlertListSet = rcv_data[0];
+            var AlertListUnset = rcv_data[1];
+            //割当済みインシデント
+            for (let i of AlertListSet) {
                 //console.log(i);
                 var row = makeAlertRow(i);
                 //表データ追加
-                $("#alertlist_th").append(row);
+                $("#setAlertList_th").append(row);
             }
+            //未割当インシデント
+            for (let i of AlertListUnset) {
+                //console.log(i);
+                var row = makeAlertRow(i);
+                //表データ追加
+                $("#unsetAlertList_th").append(row);
+            }
+
+            //更新時刻表示
             $("#getListMessage").text('更新: ' + GetDate());
             console.log(GetDate());
             console.log("END:alertListAPI");
+
         }).fail(function (rcv_data, textStatus, errorThrown) {
             // エラー処理
             console.log(rcv_data);
@@ -39,8 +52,9 @@ function makeAlertRow(AlertRow) {
     //List要素生成
     var row1 = '<tr id="' + AlertRow['_id']['$oid'] + '">'
     var row2 = '<th scope="row">' + AlertRow['servce'] + '</th><td>' + AlertRow['alertName'] + '</td><td>' + AlertRow['Hostname'] + '</td><td>' + AlertRow['alertTime'] + '</td><td>' + AlertRow['incidentNumber'] + '</td></tr>';
+    var row3 = ''
     //console.log(row1 + row2);
-    return row1 + row2;
+    return row1 + row2 + row3;
 }
 //権限表記変更
 function AuthoritySet(Authority) {
