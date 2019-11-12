@@ -38,7 +38,7 @@
                       <label for="exampleFormControlTextarea1">備考</label>
                       <textarea readonly class="form-control" id="remark" rows="3"></textarea>
                   </div>
-                  <button class="btn btn-lg btn-primary btn-block" id="getincidentData" type="submit">取得</button><br>
+                  <button class="btn btn-lg btn-outline-secondary btn-block" id="getincidentData" type="submit">再取得</button><br>
               </form>
 </div>
 
