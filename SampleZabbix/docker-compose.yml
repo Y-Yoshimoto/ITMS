@@ -20,7 +20,7 @@ services:
             - ./snmp_data/snmptraps:/var/lib/zabbix/snmptraps
             - ./snmp_data/mibs:/var/lib/zabbix/mibs
         networks:
-            - samplezabbbix_default
+            - samplezabbix_default
             - itms_docker_default
 
     zabbix-web:
@@ -44,7 +44,7 @@ services:
         #        driver: "journald"
         networks:
             - itms_docker_default
-            - samplezabbbix_default
+            - samplezabbix_default
 
     zabbix-timescaledb:
         image: zabbix-timescaledb
@@ -91,5 +91,5 @@ services:
 networks:
     itms_docker_default:
         external: true
-    samplezabbbix_default:
+    samplezabbix_default:
         external: true
