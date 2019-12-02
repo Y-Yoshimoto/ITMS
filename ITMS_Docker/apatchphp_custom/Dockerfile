@@ -6,6 +6,10 @@ MAINTAINER y.yoshimoto
 RUN apt-get update && apt-get install -y libcurl4-openssl-dev pkg-config libssl-dev\
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
+
+# HTTPプロキシサーバを経由する場合
+# RUN pear config-set http_proxy http://proxy:3128
+
 ## ライブラリ追加
 RUN docker-php-ext-install pdo_mysql
 RUN pecl install redis-5.0.2\
