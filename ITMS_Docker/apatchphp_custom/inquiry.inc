@@ -4,7 +4,8 @@
     define('USERNAME',"itmsUser");
     define('PASSWORD',"Password");
     define('DABENAME',"itms");
-    $DSN = 'mysql:host='.SERVER.';dbname='.DABENAME.';charset=utf8';
+    //$DSN = 'mysql:host='.SERVER.';dbname='.DABENAME.';charset=utf8';
+    $DSN = 'mysql:host='.SERVER.';dbname='.DABENAME.';charset=utf8mb4';
     //接続
     try{
         $dbh = new PDO($DSN, USERNAME, PASSWORD);
