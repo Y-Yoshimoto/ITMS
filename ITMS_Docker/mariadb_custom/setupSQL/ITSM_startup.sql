@@ -1,4 +1,6 @@
 -- mysql -u itmsUser -h 127.0.0.1 -p itms
+SET CHARACTER_SET_CLIENT = utf8;
+SET CHARACTER_SET_CONNECTION = utf8;
 create database itms;
 -- create user itmsUser@'%' identified by 'Password';
 GRANT all on itms.* TO `itmsUser`@'%' IDENTIFIED BY 'Password';
