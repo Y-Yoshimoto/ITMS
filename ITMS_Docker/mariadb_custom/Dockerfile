@@ -8,4 +8,5 @@ COPY my.cnf /etc/mysql/my.cnf
 EXPOSE 3306
 
 # 初期構築データのコピー
-# COPY setupSQL/ITSM_startup.sql /docker-entrypoint-initdb.d/ITSM_startup.sql
+COPY setupSQL/ITSM_startup.sql /docker-entrypoint-initdb.d/ITSM_startup.sql
+RUN chmod 755 /docker-entrypoint-initdb.d/ITSM_startup.sql
