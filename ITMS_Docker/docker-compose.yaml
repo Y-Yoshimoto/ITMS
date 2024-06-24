@@ -1,11 +1,10 @@
-version: '3'
 services:
     nginx:
         image: nginx_custom
         build: nginx_custom
         restart: always
         depends_on:
-              - phpap
+            - phpap
         ports:
             - "80:80"
             #- "443:443"
@@ -29,7 +28,7 @@ services:
         #logging:
         #    driver: "journald"
         volumes:
-             - ./apatchphp_custom/contents/:/var/www/html/
+            - ./apatchphp_custom/contents/:/var/www/html/
 
     mariadb:
         image: mariadb_custom

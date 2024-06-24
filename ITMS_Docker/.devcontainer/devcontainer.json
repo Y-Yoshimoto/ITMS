@@ -1,0 +1,19 @@
+{
+    "name": "phpap",
+    "dockerComposeFile": [
+        "../docker-compose.yaml"
+    ],
+    "service": "phpap",
+    "workspaceFolder": "/var/www/html/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "xdebug.php-debug",
+                "bmewburn.vscode-intelephense-client",
+                "neilbrayfield.php-docblocker",
+                "ZixuanChen.vitest-explorer"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}

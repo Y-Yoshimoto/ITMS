@@ -25,7 +25,7 @@
 <?php
 		    echo '<br><h1>Session<br></h1>';
 		        $redis = new Redis();
-		        $redis->connect('itms_docker_radis_1', 6379);
+		        $redis->connect('radis', 6379);
 			    $allKeys = $redis->keys('*');
 			    print_r( $allKeys );
 			            echo'<br>';

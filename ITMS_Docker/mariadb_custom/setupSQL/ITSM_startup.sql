@@ -3,10 +3,22 @@ SET CHARACTER_SET_CLIENT = utf8;
 SET CHARACTER_SET_CONNECTION = utf8;
 create database itms;
 -- create user itmsUser@'%' identified by 'Password';
-GRANT all on itms.* TO `itmsUser`@'%' IDENTIFIED BY 'Password';
-GRANT all on itms.* TO `itmsUser`@'localhost' IDENTIFIED BY 'Password';
-SELECT user,host FROM mysql.user;
+-- GRANT all on itms.* TO `itmsUser`@'%' IDENTIFIED BY 'Password';
+-- GRANT all on itms.* TO `itmsUser`@'localhost' IDENTIFIED BY 'Password';
+-- GRANT all on itms.* TO `itmsUser`@'itms_docker-phpap-1.itms_docker_default' IDENTIFIED BY 'Password';
+
 -- grant all on itms.* to itmsUser;
+CREATE USER 'itmsUser'@'%' IDENTIFIED BY 'Password';
+CREATE USER 'itmsUser'@'localhost' IDENTIFIED BY 'Password';
+CREATE USER 'itmsUser'@'itms_docker-phpap-1.itms_docker_default' IDENTIFIED BY 'Password';
+
+GRANT ALL ON itms.* TO 'itmsUser'@'%';
+GRANT ALL ON itms.* TO 'itmsUser'@'localhost';
+GRANT ALL ON itms.* TO 'itmsUser'@'itms_docker-phpap-1.itms_docker_default';
+
+FLUSH PRIVILEGES;
+SELECT user,host FROM mysql.user;
+
 use itms;
 -- User data
 CREATE TABLE t_userdata (

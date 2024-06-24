@@ -5,7 +5,7 @@
 
     //Get incidentNumber
     $redis = new Redis();
-    $redis->connect('itms_docker_radis_1', 6379);
+    $redis->connect('radis', 6379);
     $incidentNumber = $redis->get('incidentNumber');
     error_log("Data"."$incidentNumber");
 

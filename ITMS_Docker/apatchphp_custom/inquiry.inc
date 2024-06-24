@@ -1,6 +1,6 @@
 <?php
     //接続情報
-    define('SERVER',"itms_docker_mariadb_1");
+    define('SERVER',"mariadb");
     define('USERNAME',"itmsUser");
     define('PASSWORD',"Password");
     define('DABENAME',"itms");
